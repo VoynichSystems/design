@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" width="64" height="64">
+  <!-- "V." from the VOYNICH dot-matrix mark -->
+  <rect width="9" height="9" rx="1.8" fill="#0a0a0a"/>
+  <g fill="#e6e6e6">
+    <circle cx="1.5" cy="1.5" r=".42"/><circle cx="1.5" cy="2.5" r=".42"/><circle cx="1.5" cy="3.5" r=".42"/><circle cx="1.5" cy="4.5" r=".42"/><circle cx="1.5" cy="5.5" r=".42"/>
+    <circle cx="5.5" cy="1.5" r=".42"/><circle cx="5.5" cy="2.5" r=".42"/><circle cx="5.5" cy="3.5" r=".42"/><circle cx="5.5" cy="4.5" r=".42"/><circle cx="5.5" cy="5.5" r=".42"/>
+    <circle cx="2.5" cy="6.5" r=".42"/><circle cx="4.5" cy="6.5" r=".42"/><circle cx="3.5" cy="7.5" r=".42"/>
+  </g>
+  <circle cx="7.5" cy="7.5" r=".42" fill="#d0342c"/>
+</svg>

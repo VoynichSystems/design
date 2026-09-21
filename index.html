@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web Design | Voynich Systems</title>
+<meta name="description" content="Voynich Systems designs and builds websites for small brands and independent businesses. Tell us about your project: hello@voynich.systems">
+<link rel="canonical" href="https://design.voynich.systems/">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0a0a0a">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Voynich Systems">
+<meta property="og:title" content="Web Design | Voynich Systems">
+<meta property="og:description" content="Websites for small brands and independent businesses, designed and built by hand.">
+<meta property="og:url" content="https://design.voynich.systems/">
+<meta property="og:image" content="https://design.voynich.systems/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Voynich Systems: web design">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Bump ?v= on any icon change, browsers cache favicons for a long time. -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=1">
+<link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=1">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --ink: #e6e6e6;
+    --dim: #7a7a7a;
+    --line: #1f1f1f;
+    --red: #d0342c;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 14px/1.6 ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--ink); text-underline-offset: 4px; }
+  a:hover { color: #fff; }
+  a:focus-visible, button:focus-visible { outline: 1px solid var(--ink); outline-offset: 3px; }
+
+  header, footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 16px;
+    padding: 20px 24px;
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  footer { border-top: 1px solid var(--line); margin-top: 96px; }
+
+  main { flex: 1; padding: 0 24px; }
+
+  /* Hero */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 88px 0 24px;
+  }
+  #mark { display: block; width: min(520px, 86vw); height: auto; }
+  .sub {
+    margin-top: 14px;
+    font-size: 13px;
+    letter-spacing: .58em;
+    text-indent: .58em; /* offsets the trailing tracking so it centres */
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  h1 {
+    margin-top: 64px;
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -.01em;
+    max-width: 22em;
+    text-wrap: balance;
+  }
+  .lead { margin-top: 16px; max-width: 36em; color: var(--dim); text-wrap: pretty; }
+
+  .go {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 12px 22px;
+    border: 1px solid var(--red);
+    color: var(--ink);
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .go:hover { background: var(--red); color: #fff; }
+
+  /* Sections */
+  .block { width: min(820px, 100%); margin: 88px auto 0; }
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  .eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--red);
+    margin-right: 9px;
+    vertical-align: 1px;
+  }
+
+  .services {
+    list-style: none;
+    padding: 0;
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .services li { border-top: 1px solid var(--line); padding-top: 20px; }
+  .services .n { font-size: 11px; letter-spacing: .14em; color: var(--dim); }
+  .services h3 { margin-top: 10px; font-size: 15px; font-weight: 600; }
+  .services p { margin-top: 6px; color: var(--dim); }
+
+  .contact {
+    border: 1px solid var(--line);
+    padding: 48px 32px;
+    text-align: center;
+  }
+  .contact .ask { margin-top: 20px; font-size: clamp(18px, 2.4vw, 22px); font-weight: 600; text-wrap: balance; }
+  .contact .hint { margin: 10px auto 0; max-width: 32em; color: var(--dim); text-wrap: pretty; }
+  .email {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px 16px;
+  }
+  .email a { font-size: clamp(16px, 2.6vw, 22px); }
+  .copy {
+    font: inherit;
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--dim);
+    background: none;
+    border: 1px solid var(--line);
+    padding: 8px 14px;
+    cursor: pointer;
+  }
+  .copy:hover { color: var(--ink); border-color: var(--dim); }
+
+  @media (max-width: 720px) {
+    .services { grid-template-columns: 1fr; gap: 24px; }
+  }
+  @media (max-width: 480px) {
+    main { padding: 0 16px; }
+    header, footer { padding: 18px 16px; }
+    .hero { padding-top: 64px; }
+    .sub { letter-spacing: .42em; text-indent: .42em; }
+    h1 { margin-top: 48px; }
+    .block { margin-top: 64px; }
+    .contact { padding: 36px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span>Voynich Systems</span>
+  <span>Web design</span>
+</header>
+
+<main>
+  <section class="hero">
+    <canvas id="mark" role="img" aria-label="Voynich"></canvas>
+    <div class="sub" aria-hidden="true">Systems</div>
+    <h1>Websites, designed and built by hand.</h1>
+    <p class="lead">Voynich Systems designs and builds websites for small brands and
+    independent businesses. Simple, quick to load, and made to fit your brand
+    rather than a template.</p>
+    <a class="go" href="mailto:hello@voynich.systems?subject=Website%20enquiry">Start a project</a>
+  </section>
+
+  <section class="block" aria-labelledby="what">
+    <h2 class="eyebrow" id="what">What we do</h2>
+    <ol class="services">
+      <li>
+        <span class="n">01</span>
+        <h3>Design</h3>
+        <p>Layout, type and colour made for your brand, not picked from a template.</p>
+      </li>
+      <li>
+        <span class="n">02</span>
+        <h3>Build</h3>
+        <p>Hand-written pages that load fast and read well on any phone.</p>
+      </li>
+      <li>
+        <span class="n">03</span>
+        <h3>Launch</h3>
+        <p>Put live on your own domain, ready to share.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Recent work: uncomment and fill in once a client site is live.
+  <section class="block" aria-labelledby="work">
+    <h2 class="eyebrow" id="work">Recent work</h2>
+    <ol class="services">
+      <li>
+        <span class="n">Brand name</span>
+        <h3><a href="https://example.com">example.com</a></h3>
+        <p>One line on what the site is.</p>
+      </li>
+    </ol>
+  </section>
+  -->
+
+  <section class="block contact" aria-labelledby="contact">
+    <h2 class="eyebrow" id="contact">Get in touch</h2>
+    <p class="ask">Tell us about your project.</p>
+    <p class="hint">A few lines is plenty: what you do, what the site needs, and a
+    site or two you like the look of.</p>
+    <div class="email">
+      <a href="mailto:hello@voynich.systems?subject=Website%20enquiry">hello@voynich.systems</a>
+      <button type="button" class="copy" data-copy="hello@voynich.systems" aria-live="polite">Copy</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>&copy; 2026 Voynich Systems</span>
+  <span>design.voynich.systems</span>
+</footer>
+
+<script>
+// The VOYNICH dot-matrix mark, same as voynich.systems. 5x7 caps, 1 = dot on.
+var FONT = {
+  V: ["10001","10001","10001","10001","10001","01010","00100"],
+  O: ["01110","10001","10001","10001","10001","10001","01110"],
+  Y: ["10001","10001","01010","00100","00100","00100","00100"],
+  N: ["10001","11001","10101","10011","10001","10001","10001"],
+  I: ["01110","00100","00100","00100","00100","00100","01110"],
+  C: ["01110","10001","10000","10000","10000","10001","01110"],
+  H: ["10001","10001","10001","11111","10001","10001","10001"]
+};
+
+var WORD = "VOYNICH";
+var canvas = document.getElementById("mark");
+var ctx = canvas.getContext("2d");
+var cols = WORD.length * 6 + 1; // 5 per letter + 1 gap, then the full stop
+var rows = 7;
+
+var dots = [];
+for (var i = 0; i < WORD.length; i++) {
+  var g = FONT[WORD[i]];
+  for (var r = 0; r < rows; r++) {
+    for (var c = 0; c < 5; c++) {
+      if (g[r][c] === "1") dots.push({ x: i * 6 + c, y: r, red: false });
+    }
+  }
+}
+dots.push({ x: cols - 1, y: rows - 1, red: true });
+
+var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var SETTLE = 1100; // ms until every dot has locked in
+var t0 = null;
+var settled = reduce;
+
+dots.forEach(function (d) {
+  d.at = reduce ? 0 : 120 + Math.random() * (SETTLE - 120);
+});
+
+function size() {
+  var w = canvas.clientWidth || 520;
+  var cell = w / cols;
+  var dpr = window.devicePixelRatio || 1;
+  canvas.width = Math.round(w * dpr);
+  canvas.height = Math.round(cell * rows * dpr);
+  canvas.style.height = (cell * rows) + "px";
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return cell;
+}
+
+function draw(now) {
+  if (t0 === null) t0 = now;
+  var t = settled ? Infinity : now - t0;
+  var cell = size();
+  var rad = cell * 0.34;
+  var pending = false;
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (var i = 0; i < dots.length; i++) {
+    var d = dots[i];
+    var locked = t >= d.at;
+    if (!locked) pending = true;
+    if (!locked && Math.random() >= 0.4) continue; // still scrambled
+    ctx.beginPath();
+    ctx.arc((d.x + 0.5) * cell, (d.y + 0.5) * cell, rad, 0, Math.PI * 2);
+    ctx.fillStyle = locked && d.red ? "#d0342c" : "#e6e6e6";
+    ctx.fill();
+  }
+
+  if (pending) requestAnimationFrame(draw);
+  else settled = true;
+}
+
+requestAnimationFrame(draw);
+window.addEventListener("resize", function () {
+  if (settled) draw(performance.now());
+});
+
+// Copy button, for visitors with no mail app set up.
+document.querySelectorAll("[data-copy]").forEach(function (b) {
+  if (!navigator.clipboard) { b.hidden = true; return; }
+  b.addEventListener("click", function () {
+    navigator.clipboard.writeText(b.getAttribute("data-copy")).then(function () {
+      b.textContent = "Copied";
+      setTimeout(function () { b.textContent = "Copy"; }, 1600);
+    });
+  });
+});
+</script>
+
+</body>
+</html>
